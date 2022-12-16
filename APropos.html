@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="icon" type="image/x-icon" href="/images/IconPage.ico">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos</title>
+</head>
+
+<!-- Code d'une page explicant notre mission et le but de notre compagnie, ainsi que le code pour intégrer une vidéo YouTube.-->
+
+<body>
+    <div class="nav"></div>
+
+    <div class="page-title main centered">
+        À Propos de nous
+    </div>
+    
+    <div class="centered ">
+        <div class="description">
+            Notre mission est de fournir une aide aux entreprises félines locales ainsi qu'aux refuges pour chats dans l'espoir de réduire le nombre de chatons sans abri qui naissent chaque jour. Notre objectif principal est d'aider à comprendre le chat afin de pouvoir cibler ses besoins. Il existe de nombreuses façons d'aider, vous pouvez nous contacter via la page de contact pour savoir de quelle manière vous pouvez nous aider. Une autre façon d'aider est de regarder cette vidéo.
+        </div>
+    </div>
+
+    <div class="centered">
+ 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oihOHGhVxww" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="footer-spacing"></div>
+    <div class="footer"></div>
+    <!-- Utilisation de Jquery -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.2.min.js"
+    integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+    crossorigin="anonymous"></script>
+    <!-- Utilisation de script basic pour load la barre de navIgation et le footer -->
+    <script>
+        $.get("Nav.html", function (data) {
+            $(".nav").replaceWith(data);
+        });
+        $.get("Footer.html", function (data) {
+            $(".footer").replaceWith(data);
+        });
+    </script>
+</body>
+
+</html>

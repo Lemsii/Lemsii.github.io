@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Site</title>
+</head>
+
+<body>
+    <div class="nav"></div>
+
+    <div class="page-title main centered">
+        Plan de Site
+    </div>
+
+    <div class="centered">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="APropos.html">À propos</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="NousJoindre.html">Nous Joindre</a></li>
+            <li><a href="PlanDeSite.html">Plan de site</a></li>
+            <li><a href="LiensUtiles.html">Liens Utiles</a></li>
+
+            <li><a href="/Chat.html?type=bengal">Bengal</a></li>
+            <li><a href="/Chat.html?type=birman">Birman</a></li>
+            <li><a href="/Chat.html?type=winky">Winky</a></li>
+            <li><a href="/Chat.html?type=savannah">Savannah</a></li>
+            <li><a href="/Chat.html?type=scottish">Scottish</a></li>
+
+        </ul>
+    </div>
+
+    <div class="footer-spacing"></div>
+
+    <div class="footer"></div>
+    <!-- Utilisation de JQuery's CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <!-- Utilisation de script basic pour load la barre de naviguation et le footer.  -->
+    <script>
+        $.get("Nav.html", function (data) {
+            $(".nav").replaceWith(data);
+        });
+        $.get("Footer.html", function (data) {
+            $(".footer").replaceWith(data);
+        });
+    </script>
+</body>
+
+</html>

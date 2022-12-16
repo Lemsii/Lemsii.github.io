@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/IconPage.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+</head>
+
+<!-- Code de la page principale, soit l'accueil.-->
+
+<body>
+    <div class="nav"></div>
+
+    <div class="home">
+        <h1 class="centered"> Bienvenue! </h1>
+    </div>
+
+    <!-- Voici les conteneur utilisé dans la page principale pour montré les différents chats. -->
+    <div class="cats-menu">
+        <h3 class="centered">Voir nos chats:</h3>
+        <div class="centered cat-list-container ">
+            <div class="cat_img"><a href="/Chat.html?type=bengal"><img alt="Bengal" src="/images/bengal.jpg"></a></div>
+            <div class="cat_img"><a href="/Chat.html?type=birman"><img alt="Birman" src="/images/birman.jpg"></a></div>
+            <div class="cat_img"><a href="/Chat.html?type=savannah"><img alt="Savannah" src="/images/savannah.jpg"></a></div>
+            <div class="cat_img"><a href="/Chat.html?type=scottish"><img alt="Scottish" src="/images/scottish.jpg"></a></div>
+            <div class="cat_img"><a href="/Chat.html?type=winky"><img alt="Winky" src="/images/winky.jpg"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ceci est la partie auditif de la page principale -->
+    <div class="centered">
+        <audio controls autoplay>
+            <source src="audio/BruitChat.mp3" type="audio/ogg">
+            <source src="audio/BruitChat.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="footer-spacing"></div>
+
+    <div class="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <script>
+        $.get("Nav.html", function (data) {
+            $(".nav").replaceWith(data);
+        });
+
+        $.get("Footer.html", function (data) {
+            $(".footer").replaceWith(data);
+        });
+    </script>
+</body>
+
+</html>

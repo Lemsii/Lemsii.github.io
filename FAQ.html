@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="icon" type="image/x-icon" href="/images/IconPage.ico">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+</head>
+
+<body>
+    <div class="nav"></div>
+
+    <div class="page-title main centered">
+        FAQ
+    </div>
+
+    <div class="centered faq-container">
+        <ul class="faq-ul">
+            <li class="description">Comment savoir quels types de chats adopter?
+               
+               
+                <strong>Lorsque vous choisissez un chat, choisissez-en un qui est actif, curieux et qui recherche l'affection et l'attention des gens. Les chats sont parfois mal à l'aise dans des environnements bruyants ou inconnus, alors gardez cela à l'esprit lors de votre évaluation. Un chat adulte doit pouvoir être manipulé et caressé sans siffler ni griffer.
+                </strong>
+            </li>
+            
+            <li class="description">Pourquoi un chat aulieu d'un chien?
+                
+                
+                <strong>
+                    Avoir un chat comme animal domestique ne nécessite pas un grand budget. La plupart des chats de compagnie sont vendus lorsqu’ils sont encore « bébé » et ne coûtent pratiquement rien. De plus, l’entretien d’un chat n’a pas besoin d’un grand investissement dans la mesure où c’est un animal assez indépendant. Le chat peut parfaitement prendre soin de lui-même pendant plusieurs jours : il suffit que vous mettiez de la nourriture à sa disposition.
+                </strong>
+            </li>
+          
+            <li class="description">Comment savoir si mon chat est malade?
+                
+                
+                <strong>
+                    Les chats malades présentent généralement des changements au niveau de l'apparence générale, du niveau d'énergie, de la sociabilité, de l'aspect du pelage et/ou de la quantité de poils perdus, de l'appétit, de l'utilisation de la litière, de la respiration ou des écoulements des yeux ou du nez. En général, tout changement soudain doit vous alerter sur le fait que votre chat a besoin de soins vétérinaires.
+                </strong>
+            </li>
+
+            
+            <li class="description">Pourquoi les chats n'aiment pas l'eau?
+                
+                
+                <strong>
+                    Il existe de nombreux types et races de
+                    chats qui sont à l'aise autour ou dans l'eau. De nombreux chats pêchent pour se nourrir. Le Van turc et le Maine Coon semblent semblent aimer l'eau, et même s'y immerger. dans l'eau. Pour ceux qui n'aiment pas l'eau, cela peut être lié à la façon dont leur fourrure est construite. peut être lié à la façon dont leur fourrure est construite. Elle n'est pas faite pour être trempée et peut devenir assez lourde quand elle l'est. </strong>
+            
+            
+            <li class="description">
+                Pourquoi les chats ronronnent-ils ?
+               
+                
+                <strong>
+                    Le ronflement est le résultat de la vibration
+                    des cordes vocales due à une stimulation neurologique
+                    de l'activité cérébrale. Le but est incertain mais il semble être
+                    être associé à une activité plaisante.
+                    Cependant, les chats sont également connus pour ronronner
+                    lorsqu'ils sont malades ou blessés, ce qui conduit certains à croire que la
+                    fréquence de la vibration peut être associée à une meilleure
+                    guérison. Le ronronnement est aussi un renforcement pour les gens et donc
+                    peut augmenter le nombre de caresses.
+                </strong>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="footer-spacing"></div>
+
+    <div class="footer"></div>
+    <!-- Utilisation de JQuery's CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <!--Utilisation basique de script pour télecharger la barre de navigation et le footer -->
+    <script>
+        $.get("Nav.html", function (data) {
+            $(".nav").replaceWith(data);
+        });
+        $.get("Footer.html", function (data) {
+            $(".footer").replaceWith(data);
+        });
+    </script>
+</body>
+
+</html>

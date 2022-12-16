@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/IconPage.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats</title>
+</head>
+
+
+<body>
+    <div class="nav"></div>
+
+    <main class="centered main">
+        <h1 class="cat_title"></h1>
+        <div>
+            <img class="cat_image" alt="" src="">
+        </div>
+
+        <div class="description">
+        </div>
+
+        <div class="actions">
+            <a class="action_ref" href="#">Voir plus</a>
+        </div>
+    </main>
+    <div class="footer-spacing"></div>
+
+    <div class="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+    integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <script>
+        // Cette partie est utilisée afin de générer la description des chats de manière dynamique.
+        let cats = [
+            'bengal',
+            'birman',
+            'savannah',
+            'scottish',
+            'winky',
+        ];
+
+        let cat_pages = {
+            'bengal': "Bengal.html",
+            'birman': "Birman.html",
+            'savannah': "Savannah.html",
+            'scottish': "Scottish.html",
+            'winky': "Winky.html"
+        }
+
+        // Ici nous utilisons les paramètres d'URL afin d'identifier quel chat à été clické par l'utilisateur.
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+
+        let cat_type = params.type;
+        cat_type_index = cats.indexOf(cat_type);
+
+        // Nous validons que nous avons ce chat dans notre liste de chat prédéfinie
+        if (cat_type_index == -1) {
+            // Sinon, nous redirigeons l'utilisateur vers une page 404.
+            window.location.replace("404.html");
+        }
+
+        $.get("Nav.html", function (data) {
+            $(".nav").replaceWith(data);
+        });
+        $.get("Footer.html", function (data) {
+            $(".footer").replaceWith(data);
+        });
+
+        $(document).ready(() => {
+            // Cette section ne fait qu'ajouter les parties respectives à chaque chat dans la page HTML.
+            cat_image = `/images/${cat_type}.jpg`;
+            cat_href = `https://www.google.com/?query=${cat_type}+Chat`;
+            $(".cat_image").attr('src', cat_image);
+            $(".cat_image").attr('alt', cat_type);
+            $(".cat_title").text(cat_type.toUpperCase());
+            $(".action_ref").attr("href", cat_href);
+            $.get(cat_pages[cat_type], function (data) {
+                $(".description").replaceWith(data);
+            });
+            document.title = String(cat_type).toLocaleUpperCase()
+        })
+    </script>
+</body>
+
+</html>
