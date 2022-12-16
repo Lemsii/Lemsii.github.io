@@ -2,14 +2,20 @@
 
 
 body {
-    margin: 50px;
     padding: 0;
-
-    background: #F5B9AC;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 80%;
     color: #232323;
     font-family: 'Arial', sans-serif;
+    background: #ffffff;
+
+
 }
 
+.body {
+    background-color: #b98577;
+}
 
 /* Tout les éléments utilisant le prefix "footer" appartiennent aux éléments de la page Footer.html */
 
@@ -36,15 +42,17 @@ body {
 
 .footer {
     background-color: #232323;
+
     bottom: 0px;
     position: fixed;
     display: block;
-    width: 100vw;
+    width: 79%;
     padding: 10px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
 }
+
 
 .cat-list-container {
     display: flex;
