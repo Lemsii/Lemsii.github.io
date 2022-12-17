@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin-left: 10%;
     margin-right: 10%;
-    max-width: 80%;
+    width: 75%;
     color: #232323;
     font-family: 'Arial', sans-serif;
     background: #ffffff;
@@ -13,8 +13,14 @@ body {
 
 }
 
+.footer-element {
+    color: white;
+    padding: 0rem !important;
+}
+
 .body {
     background-color: #b98577;
+    height:100vh;
 }
 
 /* Tout les éléments utilisant le prefix "footer" appartiennent aux éléments de la page Footer.html */
@@ -35,22 +41,19 @@ body {
     font-size: 16px;
 }
 
-
 #footer-menu li {
     padding: 15px;
 }
 
 .footer {
     background-color: #232323;
-
     bottom: 0px;
     position: fixed;
     display: block;
-    width: 79%;
-    padding: 10px;
-    z-index: 1;
+    width: 75%;
     -webkit-user-select: none;
     user-select: none;
+    padding-top: 1rem;
 }
 
 img {
@@ -220,11 +223,14 @@ img {
         display: flex;
         flex-direction: row;
 
-        background: #ffffff;
-
+        background: #232323;
+        
         padding: 0;
-        padding-left: 15px;
         height: auto;
+        width: 75%;
+        position: fixed;
+        z-index: 1;
+        margin-left: 10%;
 
         transform: none;
         transition: none;
@@ -232,6 +238,11 @@ img {
 
     #navmenu li {
         padding: 15px;
+    }
+
+    #navmenu li a {
+        padding: 15px;
+        color: white !important;
     }
 
     /* DROPDOWN: */
@@ -268,7 +279,6 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
 }
 
 
@@ -278,7 +288,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: x-large;
+    font-size: 40px;
+}
+
+
+.link-elements {
+    font-size: 33px;
 }
 
 /* Ces classes sont utilisées pour la page "NousJoindre" afin de centré les éléments et leurs icones (Facebook, Twitter, etc.)*/
@@ -324,11 +339,28 @@ img {
 
 .footer-spacing {
     height: 500px;
+    background: #b98577;
 }
 
-.blocPlan {
-    height: 1000px;
+.footer-subcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    font-size: 16px !important;
 }
+
+.footer-icons .icon-container .icon-sub-container .link-title {
+    font-size: 16px !important;
+}
+
+.footer-icons .icon-container .icon-sub-container .link-icon {
+    width: 25px !important;
+    height: 25px !important;
+}
+
 
 /* Cette partie est utilisée pour modifier la barre du footer lorsque l'écran diminue au seuil de la taille d'un écran de tablette.*/
 @media only screen and (max-width: 768px) {

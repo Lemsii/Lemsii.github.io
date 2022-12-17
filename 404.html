@@ -14,19 +14,23 @@
 <!-- Cette page est utilisée pour redirigée l'utilisateur dans le cas où il ou elle demanderais de l'information sur un chat que nous n'avons pas dans notre base de donnée locale.  -->
 
 <body>
-    <div class="nav"></div>
-    <h1 class="flex-container centered">
-        404: Nous n'avons aucune information sur ce chat en ce moment :(
-    </h1>
-    <div class="footer-spacing"></div>
+    <div class="body">
 
-    <script
-    src="https://code.jquery.com/jquery-3.6.2.min.js"
-    integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
-    crossorigin="anonymous"></script>
+        <div class="nav"></div>
+        <h1 class="flex-container centered">
+            404: Nous n'avons aucune information sur ce chat en ce moment :(
+        </h1>
+        <div class="footer"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
     <script>
         $.get("Nav.html", function (data) {
             $(".nav").replaceWith(data);
+        });
+        $.get("Footer.html", function (data) {
+            $(".footer").replaceWith(data);
         });
     </script>
 </body>
